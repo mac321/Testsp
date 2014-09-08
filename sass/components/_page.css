@@ -1,0 +1,22 @@
+.contenedor {
+  max-width: 766px;
+  margin: auto; }
+
+.header {
+  text-align: center;
+  margin: 20px 0; }
+
+.content-form {
+  padding: 20px;
+  background: white; }
+
+.content-head {
+  margin: 0 auto; }
+  .content-head .ecommerce-logo {
+    display: inline-block;
+    padding: 0.5% 1% 0% 0%;
+    vertical-align: top; }
+  .content-head .ecommerce-text {
+    width: 80%;
+    display: inline-block;
+    padding: 1% 0% 0% 0%; }

@@ -1,18 +1,10 @@
-<?php
-/* Script para la plantilla de Medios de Pago Horizontal
- * ======================================================
- * Creado por César García el 19 de julio de 2013
- * Se hace referencia desde: /horizontal.php
- */
-?>
-<script type="text/javascript">
 function checkEnableSubmit() {
-    var i
-    var mp
+    var i;
+    var mp;
     for (i=0;i<document.myform.mp.length;i++){
         if (document.myform.mp[i].checked) {
-            mp=1
-            break
+            mp=1;
+            break;
         }
     }
     if ((mp==1) && (document.myform.t_c.checked==1)) // some logic to determine if it is ok to go
@@ -33,5 +25,3 @@ this.disabled=true;this.form.submit();
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-</script>
