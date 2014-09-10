@@ -52,112 +52,119 @@
                     <div class="form-content">
 
                         <div class="seguricredito">
-                            <div class="img-seguricredito"></div>
-                            <div class="content-list">
-                            <ul>
-                                <li>
-                                    <label for="mp_visa">
-                                        <span class="radiooption"><b class="error"></b>
-                                            <input type="radio" name="mp" id="mp_visa" value="visa" onclick="checkEnableSubmit()" />
-                                        </span>
-                                        <span>
-                                            <img src="img/visa.jpg" align="top" width="60" alt="" />&nbsp;
-                                            Visa
-                                        </span>
-                                    </label>
-                                </li>
-                            </ul>
+                            <div class="logo-seguricredito">
+                                <img src="img/sp_credito.jpg" alt="">
+                            </div>
+                            <div class="opciones-seguricredito">
+                               <ul>
+                                    <li>
+                                        <label for="mp_visa">
+                                            <span class="radiooption">
+                                                <input type="radio" name="mp" id="mp_visa" value="visa" onclick="checkEnableSubmit()" />
+                                            </span>
+                                            <span class="imgoption">
+                                                <img src="img/visa.jpg" alt="Visa" />
+                                                Visa (Tarjeta de Crédito)
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="mp_mc">
+                                            <span class="radiooption">
+                                                <input type="radio" name="mp" id="mp_mc" value="mastercard" onclick="checkEnableSubmit()" />
+                                            </span>
+                                            <span class="imgoption">
+                                                <img src="img/mc.jpg" alt="Mastercard" />&nbsp;
+                                                Mastercard
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="seguricredito">
-                            <div class="img-seguricredito"></div>
-                            <div class="content-list">
-                            <ul>
-                                <li>
-                                    <label for="mp_visa">
-                                        <span class="radiooption"><b class="error"></b>
-                                            <input type="radio" name="mp" id="mp_visa" value="visa" onclick="checkEnableSubmit()" />
-                                        </span>
-                                        <span>
-                                            <img src="img/visa.jpg" align="top" width="60" alt="" />&nbsp;
-                                            Visa
-                                        </span>
-                                    </label>
-                                </li>
-                            </ul>
+                        <div class="clear"></div>
+
+                        <div class="seguridebito">
+                            <div class="logo-seguricredito">
+                                <img src="img/sp_debito.jpg" alt="">
+                            </div>
+                            <div class="opciones-seguricredito">
+                               <ul>
+                                    <li>
+                                        <label for="mp_visa_debito">
+                                            <span class="radiooption">
+                                                <input type="radio" name="mp" id="mp_visa_debito" value="visa_debito" onclick="checkEnableSubmit()" />
+                                            </span>
+                                            <span class="imgoption">
+                                                <img src="img/visa.jpg" alt="Visa" />
+                                                Visa (Tarjeta de Crédito)
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="clear"></div>
+
+                        <div class="seguricash">
+                            <div class="logo-seguricredito">
+                                <img src="img/sp_cash.jpg" alt="">
+                            </div>
+                            <div class="opciones-seguricredito">
+                               <ul>
+                                    <li>
+                                        <label for="mp_be">
+                                            <span class="radiooption">
+                                                <input type="radio" name="mp" id="mp_be" value="bancae" onclick="checkEnableSubmit()" />
+                                            </span>
+                                            <span class="imgoption">
+                                                Banca electrónica
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="mp_agente">
+                                            <span class="radiooption">
+                                                <input type="radio" name="mp" id="mp_agente" value="agente" onclick="checkEnableSubmit()" />
+                                            </span>
+                                            <span class="imgoption">
+                                                Ventanilla o Agentes
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="logos-bancos">
+                                <img src="img/b.jpg" alt="">
+                                <img src="img/bf.jpg" alt="">
+                                <img src="img/bv.jpg" alt="">
+                                <img src="img/s.jpg" alt="">
+                                <img src="img/int.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
 
                     </div>
+                    <!-- FIN CONTENT FORMULARIO -->
+
+                    <div class="form-footer">
+                            <div class="content-tc">
+                                <label for="t_c" class="checkterminos"><b class="error-terminos"></b>   <input name="t_c" type="checkbox" id="t_c" onclick="checkEnableSubmit()" value="t_c" />
+                                    Acepto los <a target="_blank" href="<?php echo $return_url_terminos;?>">términos y condiciones</a> de <b>"Joinnus S.A."</b>.
+                                </label>
+                            </div>
+                            <div class="content-pagar">
+                                <div id="sub-div">
+                                    <button class="btn btn-pagar badge" type="submit" id="pagar" onclick="return buttonSubmit()" disabled="disabled" mouse> Pagar </button>
+                                </div>
+                            </div>
+                            <span id="mensajeboton" style="display:none">Para continuar, debe aceptar T&eacute;rminos y Condiciones</span>
+                    </div>
+
                 </form>
 
             </div>
-            <form name="myform" id="seguripago-form-final" action="<?php echo dirname($_SERVER['PHP_SELF'])=="/"?"":dirname($_SERVER['PHP_SELF']); ?>/pagoin2.php" onsubmit="return checkEnableSubmit()" method="POST">
-                <div id="head">
-
-                    <div class="cuenta">
-
-                        <div class="tipo">
-
-                            <div class="seguripago_mp_horizontal">
-
-
-
-
-
-                <div class="tipo_pago <?php echo $nombre; ?>">
-                    <div class="logo"></div>
-                    <ul>
-                        <li>
-                            <label for="mp_<?php echo $medio["idMP"]; ?>">
-                                <span class="radiooption"><b class="error"></b>
-                                    <input type="radio" name="mp" id="mp_<?php echo $medio["idMP"]; ?>" value="<?php echo $medio["idMP"]; ?>" onclick="checkEnableSubmit()" />
-                                </span>
-                                <span>
-                                    <img src="<?php echo $medio["imagen"] ?>" align="top" width="60" alt="" />&nbsp;
-                                    <?php echo $medio["descripcion"]; ?>
-                                    <span class="medio_descripcion"><?php echo empty($medio["descripcion_larga"])?"":(" (".$medio["descripcion_larga"].")"); ?></span>
-                                </span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-
-
-
-
-
-                            </div>
-                        </div>
-                        <!--
-                        <div class="monto">
-                        <?php $moneda=(($monven=="PEN")?"S/.":$monven);?>
-                        <div class="seguripago_ecommerce_imp">Importe a pagar: <?php echo $moneda." ".$impven;?></div>
-                        </div>
-                        -->
-                    </div>
-                    <div class="footer">
-                        <div class="seguripago_ecommerce_text">
-                        <label for="t_c" class="checkterminos"><b class="error-terminos"></b>   <input name="t_c" type="checkbox" id="t_c" onclick="checkEnableSubmit()" value="t_c" />
-
-                                Si, acepto los t&eacute;rminos y condiciones de <b>"<?php echo $nombre_comercial;?>"</b>.
-                            </label>
-                            <a target="_blank" href="<?php echo $return_url_terminos;?>">
-                            Haz click para leer los t&eacute;rminos y condiciones
-                            </a>
-                        </div>
-                        <div class="seguripago_formbutton">
-                            <div id="sub-div">
-                                <button  type="submit" id="pagar" onclick="return buttonSubmit()" disabled="disabled" mouse> Pagar </button>
-                            </div>
-                        </div>
-                        <span id="mensajeboton" style="display:none">Para continuar, debe aceptar T&eacute;rminos y Condiciones</span>
-                        <div class="seguripago_logo"><span>Seguripago</span></div>
-                    </div>
-                </div>
-                <input type="hidden" name="token" value="<?php echo $token; ?>" >
-            </form>
 
         </div>
 

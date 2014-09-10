@@ -7,7 +7,8 @@ body {
   height: 100%;
   min-height: 100%;
   margin: auto;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  color: #4c4c4c; }
   @media only screen and (max-width: 959px) {
     body {
       width: 95%; } }
@@ -29,13 +30,15 @@ form {
 
 img {
   max-height: 100%;
-  height: auto; }
+  height: auto;
+  width: auto;
+  vertical-align: middle; }
 
 html {
   color: red;
   font-size: 13px;
   line-height: 18px;
-  font-family: "opensans";
+  font-family: "Open Sans";
   background: body; }
 
 h1,
@@ -45,7 +48,7 @@ h4,
 h5,
 h6 {
   color: #363636;
-  font-family: "opensans";
+  font-family: "Open Sans";
   font-weight: 400; }
 
 h1 {
@@ -96,6 +99,9 @@ ol {
 a {
   font-size: 13px; }
 
+input[type=radio], input[type=checkbox] {
+  margin: 0px; }
+
 /*base/_header */
 /*components/_body */
 body {
@@ -107,11 +113,85 @@ body {
 
 /*components/_form */
 form {
-  overflow: hidden;
-  padding-top: 5px;
   width: 100%;
   margin: auto;
   background: white; }
+
+/*components/_buttons */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .btn .btn:focus, .btn .btn:active:focus, .btn .btn.active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  .btn .btn:hover, .btn .btn:focus {
+    color: #333333;
+    text-decoration: none; }
+  .btn .btn:active, .btn .btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+  .btn .btn.disabled, .btn .btn[disabled], .btn fieldset[disabled] .btn {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.btn-pagar {
+  font-size: 20px;
+  padding: 6px 25px;
+  color: white;
+  background-color: #2e9fd2;
+  border-color: #247aa1; }
+  .btn-pagar:hover {
+    color: white;
+    background-color: #31b0d5;
+    border-color: #269abc; }
+  .btn-pagar:focus {
+    color: white;
+    background-color: #31b0d5;
+    border-color: #269abc; }
+  .btn-pagar:active {
+    color: white;
+    background-color: #31b0d5;
+    border-color: #269abc;
+    background-image: none; }
+  .btn-pagar .active {
+    background-image: none; }
+  .btn-pagar .btn-info.disable {
+    background-color: #5bc0de;
+    border-color: #46b8da; }
+    .btn-pagar .btn-info.disable:hover {
+      background-color: #5bc0de;
+      border-color: #46b8da; }
+    .btn-pagar .btn-info.disable:focus {
+      background-color: #5bc0de;
+      border-color: #46b8da; }
+    .btn-pagar .btn-info.disable:active {
+      background-color: #5bc0de;
+      border-color: #46b8da; }
+  .btn-pagar .badge {
+    color: #5bc0de;
+    background-color: white; }
 
 /*components/_header */
 /*components/_page */
@@ -121,7 +201,7 @@ form {
 
 .header {
   text-align: center;
-  margin: 20px 0; }
+  padding: 15px 0; }
 
 .content {
   padding: 20px;
@@ -134,40 +214,117 @@ form {
   .content-head .ecommerce-logo {
     display: inline-block;
     vertical-align: middle; }
+    .content-head .ecommerce-logo img {
+      width: 125px; }
   .content-head .ecommerce-text {
     display: inline-block;
     padding: 10px 0px 0px 20px;
     vertical-align: middle; }
 
 .form-head {
-  margin: 40px 0px 0px 0px; }
+  margin: 30px 0px 0px 0px; }
   .form-head h2 {
-    font-size: 16px;
+    font-size: 14px;
     display: inline-block;
-    padding: 15px 0; }
+    padding: 15px 0;
+    color: #4c4c4c;
+    font-weight: 600; }
   .form-head .monto {
     display: inline-block;
     float: right;
     background: #e5f6ff;
     color: #4c4c4c;
     padding: 16px 28px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px; }
 
 .form-content {
   width: 100%;
-  border-bottom: 1px solid lightgray;
-  border-top: 1px solid lightgray;
-  margin: 15px 0px; }
+  border-top: 1px solid #d6d6d6;
+  margin: 20px 0px; }
+
+.form-footer .content-tc a {
+  color: #216e90; }
+.form-footer .content-tc a:hover {
+  color: #2e9fd2; }
+.form-footer .content-tc a:visited {
+  color: #2e9fd2; }
+.form-footer .content-pagar {
+  margin-top: 15px; }
 
 .seguricredito {
-  border-bottom: 1px solid lightgray; }
-  .seguricredito .img-seguricredito {
-    background-image: url(/img/debito.png);
-    height: 57px;
-    width: 160px;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: left center; }
+  border-bottom: 1px solid #d6d6d6;
+  padding: 20px 18px; }
+  .seguricredito .logo-seguricredito {
+    width: 106px;
+    background: blue;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center; }
+  .seguricredito .opciones-seguricredito {
+    display: inline-block;
+    margin-left: 32px; }
+  .seguricredito .radiooption {
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 0%;
+    position: relative;
+    vertical-align: middle; }
+  .seguricredito .imgoption img {
+    margin: 0px 15px; }
+
+.seguridebito {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 20px 18px; }
+  .seguridebito .logo-seguricredito {
+    width: 106px;
+    background: blue;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center; }
+  .seguridebito .opciones-seguricredito {
+    display: inline-block;
+    margin-left: 32px;
+    overflow: hidden; }
+  .seguridebito .radiooption {
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 0%;
+    position: relative;
+    vertical-align: middle; }
+  .seguridebito .imgoption img {
+    margin: 0px 15px; }
+
+.seguricash {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 20px 18px; }
+  .seguricash .logo-seguricredito {
+    width: 106px;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center; }
+  .seguricash .opciones-seguricredito {
+    display: inline-block;
+    margin-left: 32px; }
+  .seguricash .radiooption {
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 0%;
+    position: relative;
+    vertical-align: middle; }
+  .seguricash .imgoption img {
+    margin: 0px 15px; }
+  .seguricash .logos-bancos {
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: 20px;
+    right: 0px;
+    bottom: 0px; }
+
+.clear {
+  clear: both; }
 
 /*components/_footer */
