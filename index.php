@@ -168,8 +168,97 @@
 
         </div>
 
+        <div class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2 class="modal-title center">Paga en Banca Electrónica</h2>
+              </div>
+              <div class="modal-body">
+
+                    <h4>Seleccione el medio de pago</h4>
+
+                    <div class="content-bancos">
+                        <div class="logo-sp">
+                            <img src="img/seguripago.jpg" alt="">
+                        </div>
+                        <div class="opciones-sp">
+                            <ul>
+                                <li>
+                                    <label for="bc_bcp">
+                                        <span>
+                                            <input type="radio" name="mp" id="bc_bcp" value="bc_bcp" onclick="checkEnableSubmit()" />
+                                        </span>
+                                        <span>
+                                            <img src="img/b.jpg" alt="">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="bc_banbif">
+                                        <span>
+                                            <input type="radio" name="mp" id="bc_banbif" value="bc_banbif" onclick="checkEnableSubmit()" />
+                                        </span>
+                                        <span>
+                                            <img src="img/bf.jpg" alt="">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="bc_bbva">
+                                        <span>
+                                            <input type="radio" name="mp" id="bc_bbva" value="bc_bbva" onclick="checkEnableSubmit()" />
+                                        </span>
+                                        <span>
+                                            <img src="img/bv.jpg" alt="">
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="opciones-sp">
+                            <ul>
+                                <li>
+                                    <label for="bc_scotia">
+                                        <span>
+                                            <input type="radio" name="mp" id="bc_scotia" value="bc_scotia" onclick="checkEnableSubmit()" />
+                                        </span>
+                                        <span>
+                                            <img src="img/s.jpg" alt="">
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="bc_interbank">
+                                        <span>
+                                            <input type="radio" name="mp" id="bc_interbank" value="bc_interbank" onclick="checkEnableSubmit()" />
+                                        </span>
+                                        <span>
+                                            <img src="img/int.jpg" alt="">
+                                        </span>
+                                    </label>
+                                </li>
+                             </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-descripcion">
+                        <h2>Número de Seguripago: 253212125245</h2>
+                        <p><b>Fecha de vencimiento: 15/12/12 12:15</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus accusamus, quaerat? Ducimus, saepe mollitia magni quos eum assumenda natus, non nemo commodi id! Quibusdam voluptatem porro iure, modi repellat, earum.</p>
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-pagar badge" type="submit" id="pagar-modal" > Pagar </button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
     </div>
+    <div class="modal-backdrop"></div>
+
 
 </body>
 </html>

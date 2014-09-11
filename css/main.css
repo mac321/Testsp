@@ -109,7 +109,7 @@ body {
   font-size: 13px;
   color: #666666;
   line-height: 20px;
-  background: #cfd9e3; }
+  background: #f2f2f2; }
 
 /*components/_form */
 form {
@@ -326,5 +326,183 @@ form {
 
 .clear {
   clear: both; }
+
+.center {
+  text-align: center; }
+
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  max-width: 500px;
+  margin: auto; }
+  .modal .modal.fade .modal-dialog {
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out; }
+  .modal .modal.in .modal-dialog {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: black; }
+  .modal-backdrop .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .modal-backdrop .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+.modal-header {
+  padding: 15px;
+  min-height: 16.42857px; }
+  .modal-header h2 {
+    font-size: 16px;
+    color: #4c4c4c;
+    font-weight: 500; }
+
+.modal-header .close {
+  margin-top: -2px; }
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857; }
+
+.modal-body {
+  position: relative;
+  padding: 15px; }
+  .modal-body h4 {
+    font-size: 14px;
+    color: #4c4c4c;
+    font-weight: 500; }
+
+.modal-footer {
+  padding: 0 15px 15px 15px; }
+  .modal-footer .modal-footer:before, .modal-footer .modal-footer:after {
+    content: " ";
+    display: table; }
+  .modal-footer .modal-footer:after {
+    clear: both; }
+  .modal-footer .modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; }
+  .modal-footer .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px; }
+  .modal-footer .modal-footer .btn-block + .btn-block {
+    margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0; }
+  button.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+  button.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: black;
+  text-shadow: 0 1px 0 white;
+  filter: alpha(opacity=20);
+  opacity: 0.2; }
+
+.sr-only {
+  position: absolute;
+  width: 31px;
+  height: 18px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  background: red;
+  z-index: 100000; }
+
+.content-bancos {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #d6d6d6; }
+  .content-bancos .logo-sp {
+    width: 138px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+  .content-bancos .opciones-sp {
+    overflow: hidden;
+    display: table-cell;
+    padding: 0 20px 0px 30px;
+    line-height: 35px; }
+
+.content-descripcion {
+  padding-top: 15px; }
+  .content-descripcion h2 {
+    font-size: 14px;
+    color: #4c4c4c;
+    font-weight: 600; }
 
 /*components/_footer */
