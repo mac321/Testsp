@@ -288,7 +288,7 @@ FECHA VENDICMIENTO -->
                     </div>
               </div>
               <div class="modal-footer">
-                <a class="btn btn-pagar badge" href="#" id="pagar-modal" > Pagar </a>
+                <a class="btn btn-pagar badge" href="#" id="pagar-modal" target="_blank" > Pagar </a>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->

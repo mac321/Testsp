@@ -162,7 +162,8 @@ form {
   padding: 6px 25px;
   color: white;
   background-color: #31b0d5;
-  border-color: #269abc; }
+  border-color: #269abc;
+  text-decoration: none; }
   .btn-pagar:hover {
     color: white;
     background-color: #2e9fd2;
