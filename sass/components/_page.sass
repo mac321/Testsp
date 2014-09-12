@@ -134,41 +134,45 @@
     clear: both
 .center
     text-align: center
+
 .modal-open
     overflow: hidden
 
 .modal
-    display: block
+    margin: auto
+    padding: 120px 0
+    display: none
     overflow: hidden
     position: fixed
-    top: 120px
+    top: 0
     right: 0
     bottom: 0
     left: 0
     z-index: 1050
     -webkit-overflow-scrolling: touch
     outline: 0
-    max-width: 500px
-    margin: auto
-    .modal.fade .modal-dialog
-        -webkit-transform: translate3d(0, -25%, 0)
-        transform: translate3d(0, -25%, 0)
-        -webkit-transition: -webkit-transform 0.3s ease-out
-        -moz-transition: -moz-transform 0.3s ease-out
-        -o-transition: -o-transform 0.3s ease-out
-        transition: transform 0.3s ease-out
-    .modal.in .modal-dialog
-        -webkit-transform: translate3d(0, 0, 0)
-        transform: translate3d(0, 0, 0)
+    &.fade
+        .modal-dialog
+            -webkit-transform: translate3d(0, -25%, 0)
+            transform: translate3d(0, -25%, 0)
+            -webkit-transition: -webkit-transform 0.3s ease-out
+            -moz-transition: -moz-transform 0.3s ease-out
+            -o-transition: -o-transform 0.3s ease-out
+            transition: transform 0.3s ease-out
+    &.in
+        .modal-dialog
+            -webkit-transform: translate3d(0, 0, 0)
+            transform: translate3d(0, 0, 0)
 
-.modal-open .modal
-    overflow-x: hidden
-    overflow-y: auto
+.modal-open
+    .modal
+        overflow-x: hidden
+        overflow-y: hidden
 
 .modal-dialog
     position: relative
-    width: auto
-    margin: 10px
+    width: 500px
+    margin: auto
 
 .modal-content
     position: relative
@@ -190,10 +194,10 @@
     left: 0
     z-index: 1040
     background-color: black
-    .modal-backdrop.fade
+    .fade
         opacity: 0
         filter: alpha(opacity=0)
-    .modal-backdrop.in
+    .in
         opacity: 0.5
         filter: alpha(opacity=50)
 
@@ -205,8 +209,9 @@
         color: #4c4c4c
         font-weight: 500
 
-.modal-header .close
-    margin-top: -2px
+.modal-header
+    &.close
+        margin-top: -2px
 
 .modal-title
     margin: 0
@@ -241,6 +246,7 @@
     width: 50px
     height: 50px
     overflow: scroll
+
 button
     &.close
         -webkit-appearance: none
@@ -260,6 +266,7 @@ button
             cursor: pointer
             filter: alpha(opacity=50)
             opacity: .5
+            outline: 0
 .close
     float: right
     font-size: 21px

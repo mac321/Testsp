@@ -100,7 +100,8 @@ a {
   font-size: 13px; }
 
 input[type=radio], input[type=checkbox] {
-  margin: 0px; }
+  margin: 0px;
+  outline: 0; }
 
 /*base/_header */
 /*components/_body */
@@ -160,33 +161,34 @@ form {
   font-size: 20px;
   padding: 6px 25px;
   color: white;
-  background-color: #2e9fd2;
-  border-color: #247aa1; }
+  background-color: #31b0d5;
+  border-color: #269abc; }
   .btn-pagar:hover {
     color: white;
-    background-color: #31b0d5;
-    border-color: #269abc; }
+    background-color: #2e9fd2;
+    border-color: #247aa1; }
   .btn-pagar:focus {
     color: white;
-    background-color: #31b0d5;
-    border-color: #269abc; }
+    background-color: #2e9fd2;
+    border-color: #247aa1;
+    outline: 0; }
   .btn-pagar:active {
     color: white;
-    background-color: #31b0d5;
-    border-color: #269abc;
+    background-color: #2e9fd2;
+    border-color: #247aa1;
     background-image: none; }
-  .btn-pagar .active {
+  .btn-pagar.active {
     background-image: none; }
-  .btn-pagar .btn-info.disable {
+  .btn-pagar.disable {
     background-color: #5bc0de;
     border-color: #46b8da; }
-    .btn-pagar .btn-info.disable:hover {
+    .btn-pagar.disable:hover {
       background-color: #5bc0de;
       border-color: #46b8da; }
-    .btn-pagar .btn-info.disable:focus {
+    .btn-pagar.disable:focus {
       background-color: #5bc0de;
       border-color: #46b8da; }
-    .btn-pagar .btn-info.disable:active {
+    .btn-pagar.disable:active {
       background-color: #5bc0de;
       border-color: #46b8da; }
   .btn-pagar .badge {
@@ -334,37 +336,37 @@ form {
   overflow: hidden; }
 
 .modal {
-  display: block;
+  margin: auto;
+  padding: 120px 0;
+  display: none;
   overflow: hidden;
   position: fixed;
-  top: 120px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
-  outline: 0;
-  max-width: 500px;
-  margin: auto; }
-  .modal .modal.fade .modal-dialog {
+  outline: 0; }
+  .modal.fade .modal-dialog {
     -webkit-transform: translate3d(0, -25%, 0);
     transform: translate3d(0, -25%, 0);
     -webkit-transition: -webkit-transform 0.3s ease-out;
     -moz-transition: -moz-transform 0.3s ease-out;
     -o-transition: -o-transform 0.3s ease-out;
     transition: transform 0.3s ease-out; }
-  .modal .modal.in .modal-dialog {
+  .modal.in .modal-dialog {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-y: hidden; }
 
 .modal-dialog {
   position: relative;
-  width: auto;
-  margin: 10px; }
+  width: 500px;
+  margin: auto; }
 
 .modal-content {
   position: relative;
@@ -386,10 +388,10 @@ form {
   left: 0;
   z-index: 1040;
   background-color: black; }
-  .modal-backdrop .modal-backdrop.fade {
+  .modal-backdrop .fade {
     opacity: 0;
     filter: alpha(opacity=0); }
-  .modal-backdrop .modal-backdrop.in {
+  .modal-backdrop .in {
     opacity: 0.5;
     filter: alpha(opacity=50); }
 
@@ -401,7 +403,7 @@ form {
     color: #4c4c4c;
     font-weight: 500; }
 
-.modal-header .close {
+.modal-header.close {
   margin-top: -2px; }
 
 .modal-title {
@@ -455,7 +457,8 @@ button.close {
     text-decoration: none;
     cursor: pointer;
     filter: alpha(opacity=50);
-    opacity: 0.5; }
+    opacity: 0.5;
+    outline: 0; }
 
 .close {
   float: right;

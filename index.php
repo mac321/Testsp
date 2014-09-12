@@ -8,7 +8,9 @@
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300'">
         <link rel="stylesheet" href="css/horizontal_css.css" />
         <link rel="stylesheet" href="css/main.css" />
-        <script src="css/horizontal_js.js"></script>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="css/modal.js"></script>
         <style>
           body {
             font-family: 'Open Sans', serif;
@@ -19,7 +21,7 @@
 <body>
 
     <div class="contenedor">
-
+<?php print_r( !empty($_POST)); ?>
         <div class="header">
             <img src="img/s1.png" alt="Seguripago">
         </div>
@@ -39,7 +41,7 @@
 
             <div class="content-form">
 
-                <form action="">
+                <form action="index2.php" name="myform" id="seguripago-form-final" method="POST">
                     <div class="form-head">
                         <h2>Seleccione el medio de pago</h2>
 
@@ -60,7 +62,7 @@
                                     <li>
                                         <label for="mp_visa">
                                             <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_visa" value="visa" onclick="checkEnableSubmit()" />
+                                                <input type="radio" name="mp" id="mp_visa" value="visa" onclick="isCheckEnabled();"/>
                                             </span>
                                             <span class="imgoption">
                                                 <img src="img/visa.jpg" alt="Visa" />
@@ -71,7 +73,7 @@
                                     <li>
                                         <label for="mp_mc">
                                             <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_mc" value="mastercard" onclick="checkEnableSubmit()" />
+                                                <input type="radio" name="mp" id="mp_mc" value="mastercard" onclick="isCheckEnabled();"/>
                                             </span>
                                             <span class="imgoption">
                                                 <img src="img/mc.jpg" alt="Mastercard" />&nbsp;
@@ -93,7 +95,7 @@
                                     <li>
                                         <label for="mp_visa_debito">
                                             <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_visa_debito" value="visa_debito" onclick="checkEnableSubmit()" />
+                                                <input type="radio" name="mp" id="mp_visa_debito" value="visa_debito" onclick="isCheckEnabled();"/>
                                             </span>
                                             <span class="imgoption">
                                                 <img src="img/visa.jpg" alt="Visa" />
@@ -115,7 +117,7 @@
                                     <li>
                                         <label for="mp_be">
                                             <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_be" value="bancae" onclick="checkEnableSubmit()" />
+                                                <input type="radio" name="mp" id="mp_be" value="bancae" onclick="isCheckEnabled();"/>
                                             </span>
                                             <span class="imgoption">
                                                 Banca electrónica
@@ -125,9 +127,7 @@
                                     <li>
                                         <label for="mp_agente">
                                             <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_agente" value="agente" onclick="checkEnableSubmit()" />
-                                            </span>
-                                            <span class="imgoption">
+                                                <input type="radio" name="mp" id="mp_agente" value="agente" onclick="isCheckEnabled();"/>
                                                 Ventanilla o Agentes
                                             </span>
                                         </label>
@@ -150,17 +150,55 @@
 
                     <div class="form-footer">
                             <div class="content-tc">
-                                <label for="t_c" class="checkterminos"><b class="error-terminos"></b>   <input name="t_c" type="checkbox" id="t_c" onclick="checkEnableSubmit()" value="t_c" />
+                                <label for="t_c" class="checkterminos"><b class="error-terminos"></b>   <input name="t_c" type="checkbox" id="t_c" value="t_c" />
                                     Acepto los <a target="_blank" href="<?php echo $return_url_terminos;?>">términos y condiciones</a> de <b>"Joinnus S.A."</b>.
                                 </label>
                             </div>
                             <div class="content-pagar">
                                 <div id="sub-div">
-                                    <button class="btn btn-pagar badge" type="submit" id="pagar" onclick="return buttonSubmit()" disabled="disabled" mouse> Pagar </button>
+                                    <button class="btn btn-pagar badge" type="submit" id="pagar"  data-dismiss="modal" onclick="return checkEnableSubmit()"> Pagar </button>
                                 </div>
                             </div>
                             <span id="mensajeboton" style="display:none">Para continuar, debe aceptar T&eacute;rminos y Condiciones</span>
                     </div>
+
+                    <input type="hidden" id="O1" name="O1" value="57">
+                    <input type="hidden" id="O2" name="O2" value="00001907">
+                    <input type="hidden" id="O3" name="O3" value="240007790">
+                    <input type="hidden" id="O4" name="O4" value="1410474251">
+                    <input type="hidden" id="O5" name="O5" value="PEN">
+                    <input type="hidden" id="O6" name="O6" value="2469.00">
+                    <input type="hidden" id="O7" name="O7" value="1">
+                    <input type="hidden" id="O8" name="O8" value="000">
+                    <input type="hidden" id="O9" name="O9" value="">
+                    <input type="hidden" id="O10" name="O10" value="0">
+                    <input type="hidden" id="O11" name="O11" value="2">
+                    <input type="hidden" id="O12" name="O12" value="">
+                    <input type="hidden" id="O13" name="O13" value="">
+                    <input type="hidden" id="O14" name="O14" value="">
+                    <input type="hidden" id="O15" name="O15" value="2">
+                    <input type="hidden" id="O16" name="O16" value="">
+                    <input type="hidden" id="O17" name="O17" value="">
+                    <input type="hidden" id="O18" name="O18" value="2014-09-14 17:24:02">
+
+<!-- Codigo de socio
+Numero de pedido
+Numero de transaccion Seguripago
+Fecha/hora de transaccion (timestamp)
+Moneda de la transaccion
+Importe de la transaccion (aprobado)
+Resultado de la transaccion. Error (0), Aprobado (1), No aprobado (2)
+Respuesta / Accion
+Texto respuesta
+Medio de pago utilizado (Tabla)
+Modo de respuesta. Inmediato (1), Batch (2), Manual (3)
+Codigo de autorizacion
+Numero de referencia generado por el medio de pago
+HASH de la transaccion
+Código de Producto de SeguriPago
+Número de tarjeta de crédito asteriscada
+Nombre del tarjetahabiente
+FECHA VENDICMIENTO -->
 
                 </form>
 
@@ -168,16 +206,16 @@
 
         </div>
 
-        <div class="modal fade">
+        <div class="modal fade" id="myModal" >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h2 class="modal-title center">Paga en Banca Electrónica</h2>
               </div>
               <div class="modal-body">
 
-                    <h4>Seleccione el medio de pago</h4>
+                    <h4>Seleccione el banco:</h4>
 
                     <div class="content-bancos">
                         <div class="logo-sp">
@@ -188,7 +226,7 @@
                                 <li>
                                     <label for="bc_bcp">
                                         <span>
-                                            <input type="radio" name="mp" id="bc_bcp" value="bc_bcp" onclick="checkEnableSubmit()" />
+                                            <input type="radio" name="mp" id="bc_bcp" value="bc_bcp" />
                                         </span>
                                         <span>
                                             <img src="img/b.jpg" alt="">
@@ -198,7 +236,7 @@
                                 <li>
                                     <label for="bc_banbif">
                                         <span>
-                                            <input type="radio" name="mp" id="bc_banbif" value="bc_banbif" onclick="checkEnableSubmit()" />
+                                            <input type="radio" name="mp" id="bc_banbif" value="bc_banbif" />
                                         </span>
                                         <span>
                                             <img src="img/bf.jpg" alt="">
@@ -208,7 +246,7 @@
                                 <li>
                                     <label for="bc_bbva">
                                         <span>
-                                            <input type="radio" name="mp" id="bc_bbva" value="bc_bbva" onclick="checkEnableSubmit()" />
+                                            <input type="radio" name="mp" id="bc_bbva" value="bc_bbva" />
                                         </span>
                                         <span>
                                             <img src="img/bv.jpg" alt="">
@@ -222,7 +260,7 @@
                                 <li>
                                     <label for="bc_scotia">
                                         <span>
-                                            <input type="radio" name="mp" id="bc_scotia" value="bc_scotia" onclick="checkEnableSubmit()" />
+                                            <input type="radio" name="mp" id="bc_scotia" value="bc_scotia" />
                                         </span>
                                         <span>
                                             <img src="img/s.jpg" alt="">
@@ -232,7 +270,7 @@
                                 <li>
                                     <label for="bc_interbank">
                                         <span>
-                                            <input type="radio" name="mp" id="bc_interbank" value="bc_interbank" onclick="checkEnableSubmit()" />
+                                            <input type="radio" name="mp" id="bc_interbank" value="bc_interbank" />
                                         </span>
                                         <span>
                                             <img src="img/int.jpg" alt="">
@@ -250,15 +288,115 @@
                     </div>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-pagar badge" type="submit" id="pagar-modal" > Pagar </button>
+                <a class="btn btn-pagar badge" href="#" id="pagar-modal" > Pagar </a>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
     </div>
-    <div class="modal-backdrop"></div>
 
+
+
+<script>
+    $(document).ready(function(){
+
+
+
+    });
+
+function checkEnableSubmit() {
+
+
+    var i;
+    var opEstado = false;
+    var opcion;
+    for (i=0;i<document.myform.mp.length;i++){
+
+        if (document.myform.mp[i].checked) {
+            opEstado = true;
+            opcion = document.myform.mp[i].value;
+            break;
+        }
+    }
+
+    if ((opEstado == true) && (document.myform.t_c.checked == 1))
+        {
+
+            // alert(document.myform.mp[i].value);
+            // document.getElementById("pagar").disabled = false;
+
+            if(opcion == "bancae"){
+
+                $.post('index3.php',{I2:12},
+                    function(data) {
+                        var dataStr = JSON.stringify(data);
+                        var dataJson = JSON.parse(dataStr);
+
+                        $("input:hidden[name=O1]").val();
+                        $("#pagar-modal").attr('href','index4.php');
+                        // alert(dataJson);
+                        // textLabel = 'Seguricash Generado';
+                        // $("#myModalLabel").text(textLabel);
+
+                        // htmlmod = htmlModal(glacier.data['O3'],'Generado');
+                        // $("#modal-sp").html('');
+                        // $("#modal-sp").append(htmlmod );
+                        // loadData();
+                        // btn.button('reset');
+                    }
+                );
+
+                $('#myModal').modal('toggle');
+                return false;
+            }
+            else
+            {
+                this.form.submit();
+
+            }
+
+        }
+    else
+        {
+            return false;
+            // document.getElementById("pagar").disabled = true;
+        }
+
+}
+
+function isCheckEnabled() {
+    var i;
+    var opEstado = false;
+    var opcion;
+    for (i=0;i<document.myform.mp.length;i++){
+
+        if (document.myform.mp[i].checked) {
+            opEstado = true;
+            opcion = document.myform.mp[i].value;
+            break;
+        }
+    }
+
+    if (opEstado == true)
+        {
+            if(opcion == "bancae")
+            {
+                document.getElementById("pagar").innerHTML = "Continuar";
+            }
+            else
+            {
+                document.getElementById("pagar").innerHTML = "Pagar";
+            }
+        }
+    else
+        {
+            document.getElementById("pagar").innerHTML = "Pagar";
+        }
+
+}
+
+</script>
 
 </body>
 </html>
