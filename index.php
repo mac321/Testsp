@@ -21,7 +21,7 @@
 <body>
 
     <div class="contenedor">
-<?php print_r( !empty($_POST)); ?>
+
         <div class="header">
             <img src="img/s1.png" alt="Seguripago">
         </div>
@@ -281,11 +281,14 @@ FECHA VENDICMIENTO -->
                         </div>
                     </div>
 
-                    <div class="content-descripcion">
-                        <h2>Número de Seguripago: 253212125245</h2>
-                        <p><b>Fecha de vencimiento: 15/12/12 12:15</b></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus accusamus, quaerat? Ducimus, saepe mollitia magni quos eum assumenda natus, non nemo commodi id! Quibusdam voluptatem porro iure, modi repellat, earum.</p>
-                    </div>
+                    <div class="pago-desc pago-desc-info">
+                        <h2 >Informacion necesaria para ir a pagar</h2>
+                        <p>
+                            Código de Seguripago: <span>253212125245</span>
+                            <br>
+                            La fecha limite para realizar el pago es: <span>15/12/12 12:15</span>
+                        </p>
+                  </div>
               </div>
               <div class="modal-footer">
                 <a class="btn btn-pagar badge" href="#" id="pagar-modal" target="_blank" > Pagar </a>
@@ -300,7 +303,6 @@ FECHA VENDICMIENTO -->
 
 <script>
     $(document).ready(function(){
-
 
 
     });

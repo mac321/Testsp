@@ -26,8 +26,12 @@
         </div>
 
         <div class="content">
-            PAGINA WEB DEL BANCO SELECCIONADO
-            <a class="btn " href="index.php" id="pagar-modal" > Retornar </a>
+            <div class="pago-desc pago-desc-info">
+                <h2 >PAGINA WEB DEL BANCO SELECCIONADO</h2>
+                <p>
+                    <a class="btn " href="index.php" id="pagar-modal" > Retornar </a>
+                </p>
+            </div>
         </div>
 
     </div>
