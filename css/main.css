@@ -204,7 +204,7 @@ form {
 
 .header {
   text-align: center;
-  padding: 15px 0; }
+  padding: 10px 0; }
 
 .content {
   padding: 20px;
@@ -214,10 +214,10 @@ form {
   margin: 0 auto;
   display: table;
   width: 100%; }
-  .content-head .ecommerce-logo {
+  .content-head .content-logos {
     display: inline-block;
     vertical-align: middle; }
-    .content-head .ecommerce-logo img {
+    .content-head .content-logos img {
       width: 125px; }
   .content-head .ecommerce-text {
     display: inline-block;
@@ -526,3 +526,97 @@ button.close {
 
 /*components/_footer */
 /*components/_body */
+@media only screen and (max-width: 320px) {
+  body {
+    background: red; }
+
+  .contenedor {
+    width: 98%;
+    margin: auto;
+    padding: 10px 0; }
+    .contenedor .header {
+      display: none; }
+    .contenedor .content {
+      padding: 10px; }
+
+  .content-head .ecommerce-text {
+    display: inline-block;
+    padding: 10px 0px 0px 0px;
+    vertical-align: middle; }
+  .content-head .content-logos {
+    display: table;
+    overflow: hidden;
+    width: 100%; }
+    .content-head .content-logos .logo-socio {
+      width: 50%;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden; }
+      .content-head .content-logos .logo-socio img {
+        float: left;
+        width: 100px; }
+    .content-head .content-logos .logo-sp {
+      width: 50%;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden; }
+      .content-head .content-logos .logo-sp img {
+        float: right;
+        width: 100px; } }
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  body {
+    background: blue; }
+
+  .contenedor {
+    width: 98%;
+    margin: auto;
+    padding: 10px 0; }
+    .contenedor .header {
+      display: none; }
+    .contenedor .content {
+      padding: 10px; }
+
+  .content-head .ecommerce-text {
+    display: inline-block;
+    padding: 10px 0px 0px 0px;
+    vertical-align: middle; }
+  .content-head .content-logos {
+    display: table;
+    overflow: hidden;
+    width: 100%; }
+    .content-head .content-logos .logo-socio {
+      width: 50%;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden; }
+      .content-head .content-logos .logo-socio img {
+        float: left;
+        width: 125px; }
+    .content-head .content-logos .logo-sp {
+      width: 50%;
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden; }
+      .content-head .content-logos .logo-sp img {
+        float: right;
+        width: 125px; } }
+@media only screen and (min-width: 769px) {
+  body {
+    background: green; }
+
+  .contenedor {
+    width: 100%;
+    margin: auto; }
+    .contenedor .content {
+      padding: 10px; }
+
+  .content-head .ecommerce-text {
+    display: inline-block;
+    padding: 10px 0px 0px 20px;
+    vertical-align: middle; }
+  .content-head .content-logos .logo-sp {
+    display: none; } }

@@ -1,1 +1,159 @@
 
+
+@media only screen and (max-width: 320px) {
+
+  body{
+      background: red;
+  }
+
+  .contenedor{
+    width: 98%;
+    margin: auto;
+    padding: 10px 0;
+    .header{
+      display: none;
+    }
+    .content{
+      padding: 10px;
+    }
+  }
+
+  .content-head {
+    .ecommerce-text {
+      display: inline-block;
+      padding: 10px 0px 0px 0px;
+      vertical-align: middle;
+    }
+    .content-logos {
+      display: table;
+      overflow: hidden;
+      width: 100%;
+      .logo-socio{
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        img{
+          float: left;
+          width: 100px;
+        }
+      }
+      .logo-sp{
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        img{
+          float: right;
+          width: 100px;
+          }
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+
+  body{
+      background: blue;
+  }
+
+
+  .contenedor{
+    width: 98%;
+    margin: auto;
+    padding: 10px 0;
+    .header{
+      display: none;
+    }
+    .content{
+      padding: 10px;
+    }
+  }
+
+  .content-head {
+    .ecommerce-text {
+      display: inline-block;
+      padding: 10px 0px 0px 0px;
+      vertical-align: middle;
+    }
+    .content-logos {
+      display: table;
+      overflow: hidden;
+      width: 100%;
+      .logo-socio{
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        img{
+          float: left;
+          width: 125px;
+        }
+      }
+      .logo-sp{
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        img{
+          float: right;
+          width: 125px;
+          }
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 769px) {
+
+  body{
+      background: green;
+  }
+
+  .contenedor{
+    width: 100%;
+    margin: auto;
+
+    .content{
+      padding: 10px;
+    }
+  }
+
+  .content-head {
+    .ecommerce-text {
+      display: inline-block;
+      padding: 10px 0px 0px 20px;
+      vertical-align: middle;
+    }
+    .content-logos {
+
+      .logo-socio{
+
+        img{
+
+        }
+      }
+      .logo-sp{
+        display: none;
+      }
+    }
+
+  }
+
+  .content-form{
+
+    .form-head{
+
+    }
+
+  }
+
+}
