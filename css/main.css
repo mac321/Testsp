@@ -31,8 +31,7 @@ form {
 img {
   max-height: 100%;
   height: auto;
-  width: auto;
-  vertical-align: middle; }
+  width: auto; }
 
 html {
   color: red;
@@ -256,76 +255,83 @@ form {
   margin-top: 15px; }
 
 .seguricredito {
-  border-bottom: 1px solid #d6d6d6;
-  padding: 20px 18px; }
-  .seguricredito .logo-seguricredito {
-    width: 106px;
-    background: blue;
-    display: inline-block;
-    overflow: hidden;
-    text-align: center; }
-  .seguricredito .opciones-seguricredito {
-    display: inline-block;
-    margin-left: 32px; }
-  .seguricredito .radiooption {
-    display: inline-block;
-    line-height: 30px;
-    padding-left: 0%;
-    position: relative;
-    vertical-align: middle; }
-  .seguricredito .imgoption img {
-    margin: 0px 15px; }
-
-.seguridebito {
-  border-bottom: 1px solid #d6d6d6;
-  padding: 20px 18px; }
-  .seguridebito .logo-seguricredito {
-    width: 106px;
-    background: blue;
-    display: inline-block;
-    overflow: hidden;
-    text-align: center; }
-  .seguridebito .opciones-seguricredito {
-    display: inline-block;
-    margin-left: 32px;
-    overflow: hidden; }
-  .seguridebito .radiooption {
-    display: inline-block;
-    line-height: 30px;
-    padding-left: 0%;
-    position: relative;
-    vertical-align: middle; }
-  .seguridebito .imgoption img {
-    margin: 0px 15px; }
-
-.seguricash {
-  border-bottom: 1px solid #d6d6d6;
-  padding: 20px 18px; }
-  .seguricash .logo-seguricredito {
-    width: 106px;
-    display: inline-block;
-    overflow: hidden;
-    text-align: center; }
-  .seguricash .opciones-seguricredito {
-    display: inline-block;
-    margin-left: 32px; }
-  .seguricash .radiooption {
-    display: inline-block;
-    line-height: 30px;
-    padding-left: 0%;
-    position: relative;
-    vertical-align: middle; }
-  .seguricash .imgoption img {
-    margin: 0px 15px; }
-  .seguricash .logos-bancos {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #d6d6d6; }
+  .seguricredito img {
+    max-width: 100px; }
+  .seguricredito .logo-producto {
+    width: 104px;
+    height: 100%;
     overflow: hidden;
     text-align: center;
-    display: inline-block;
-    position: relative;
-    top: -10px;
-    left: 20px;
-    right: 0px;
-    bottom: 0px; }
+    display: table-cell;
+    vertical-align: middle; }
+  .seguricredito .opciones-producto {
+    overflow: hidden;
+    display: table-cell;
+    padding: 0 20px 0px 20px;
+    line-height: 35px; }
+    .seguricredito .opciones-producto .radio-b {
+      margin: 2px 0px; }
+      .seguricredito .opciones-producto .radio-b img {
+        margin: -9px 15px; }
+      .seguricredito .opciones-producto .radio-b .text-option {
+        display: none; }
+
+.seguridebito {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #d6d6d6; }
+  .seguridebito img {
+    max-width: 100px; }
+  .seguridebito .logo-producto {
+    width: 104px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+  .seguridebito .opciones-producto {
+    overflow: hidden;
+    display: table-cell;
+    padding: 0 20px 0px 20px;
+    line-height: 35px; }
+    .seguridebito .opciones-producto .radio-b {
+      margin: 2px 0px; }
+      .seguridebito .opciones-producto .radio-b img {
+        margin: -9px 15px; }
+      .seguridebito .opciones-producto .radio-b .text-option {
+        display: none; }
+
+.seguricash {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #d6d6d6; }
+  .seguricash img {
+    max-width: 100px; }
+  .seguricash .logo-producto {
+    width: 104px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+  .seguricash .opciones-producto {
+    overflow: hidden;
+    display: table-cell;
+    padding: 0 20px 0px 20px;
+    line-height: 35px; }
+    .seguricash .opciones-producto .radio-b {
+      margin: 2px 0px; }
+      .seguricash .opciones-producto .radio-b img {
+        margin: -9px 15px; }
 
 .clear {
   clear: both; }
@@ -527,9 +533,6 @@ button.close {
 /*components/_footer */
 /*components/_body */
 @media only screen and (max-width: 320px) {
-  body {
-    background: red; }
-
   .contenedor {
     width: 98%;
     margin: auto;
@@ -564,11 +567,42 @@ button.close {
       overflow: hidden; }
       .content-head .content-logos .logo-sp img {
         float: right;
-        width: 100px; } }
-@media only screen and (min-width: 321px) and (max-width: 768px) {
-  body {
-    background: blue; }
+        width: 100px; }
 
+  .form-head {
+    margin: 15px 0px 0px 0px;
+    text-align: center; }
+    .form-head .monto {
+      float: none; }
+
+  .form-content {
+    margin: 0px 0px; }
+
+  .form-footer {
+    padding: 15px 0px 0px 0px; }
+    .form-footer .content-pagar {
+      text-align: center; }
+
+  .modal {
+    margin: auto;
+    padding: 70px 0px 0px 0px;
+    position: absolute;
+    bottom: initial; }
+
+  .modal-dialog {
+    position: relative;
+    width: 98%;
+    margin: auto; }
+
+  .content-bancos .logo-sp {
+    width: 100px; }
+    .content-bancos .logo-sp img {
+      max-width: 90px; }
+  .content-bancos .opciones-sp {
+    padding: 0 5px 0px 5px; }
+    .content-bancos .opciones-sp img {
+      width: 45px; } }
+@media only screen and (min-width: 321px) and (max-width: 768px) {
   .contenedor {
     width: 98%;
     margin: auto;
@@ -603,20 +637,38 @@ button.close {
       overflow: hidden; }
       .content-head .content-logos .logo-sp img {
         float: right;
-        width: 125px; } }
-@media only screen and (min-width: 769px) {
-  body {
-    background: green; }
+        width: 125px; }
 
+  .form-content .seguricredito .opciones-producto .radio-b .text-option {
+    display: inline; }
+  .form-content .seguridebito .opciones-producto .radio-b .text-option {
+    display: inline; }
+
+  .modal {
+    margin: auto;
+    padding: 80px 0px 0px 0px;
+    position: absolute;
+    bottom: initial; }
+
+  .modal-dialog {
+    position: relative;
+    width: 98%;
+    margin: auto; } }
+@media only screen and (min-width: 769px) {
   .contenedor {
     width: 100%;
     margin: auto; }
-    .contenedor .content {
-      padding: 10px; }
 
   .content-head .ecommerce-text {
     display: inline-block;
     padding: 10px 0px 0px 20px;
     vertical-align: middle; }
   .content-head .content-logos .logo-sp {
-    display: none; } }
+    display: none; }
+
+  .form-content {
+    margin: 20px 0px; }
+    .form-content .seguricredito .opciones-producto .radio-b .text-option {
+      display: inline; }
+    .form-content .seguridebito .opciones-producto .radio-b .text-option {
+      display: inline; } }

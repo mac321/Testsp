@@ -47,105 +47,73 @@
             <div class="content-form">
 
                 <form action="index2.php" name="myform" id="seguripago-form-final" method="POST">
-                    <div class="form-head">
-                        <h2>Seleccione el medio de pago</h2>
 
+                    <div class="form-head">
                         <div class="monto">
                             <div class="seguripago_ecommerce_imp">Importe a pagar: S/. 10</div>
                         </div>
-
+                        <h2>Seleccione el medio de pago</h2>
                     </div>
+                    <div class="clear"></div>
 
                     <div class="form-content">
 
                         <div class="seguricredito">
-                            <div class="logo-seguricredito">
+                            <div class="logo-producto">
                                 <img src="img/sp_credito.jpg" alt="">
                             </div>
-                            <div class="opciones-seguricredito">
-                               <ul>
-                                    <li>
-                                        <label for="mp_visa">
-                                            <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_visa" value="visa" onclick="isCheckEnabled();"/>
-                                            </span>
-                                            <span class="imgoption">
-                                                <img src="img/visa.jpg" alt="Visa" />
-                                                Visa (Tarjeta de Crédito)
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label for="mp_mc">
-                                            <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_mc" value="mastercard" onclick="isCheckEnabled();"/>
-                                            </span>
-                                            <span class="imgoption">
-                                                <img src="img/mc.jpg" alt="Mastercard" />&nbsp;
-                                                Mastercard
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="opciones-producto">
+                                <p class="radio-b">
+                                    <label for="mp_visa">
+                                        <input type="radio" name="mp" id="mp_visa" value="visa" onclick="isCheckEnabled();"/>
+                                        <img src="img/visa.jpg">
+                                        <span class="text-option">Visa (Tarjeta de Crédito)</span>
+                                    </label>
+                                </p>
+                                <p class="radio-b">
+                                    <label for="mp_mc">
+                                        <input type="radio" name="mp" id="mp_mc" value="mastercard" onclick="isCheckEnabled();"/>
+                                        <img src="img/m.jpg">
+                                        <span class="text-option">Mastercard</span>
+                                    </label>
+                                </p>
                             </div>
                         </div>
                         <div class="clear"></div>
 
                         <div class="seguridebito">
-                            <div class="logo-seguricredito">
+                            <div class="logo-producto">
                                 <img src="img/sp_debito.jpg" alt="">
                             </div>
-                            <div class="opciones-seguricredito">
-                               <ul>
-                                    <li>
-                                        <label for="mp_visa_debito">
-                                            <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_visa_debito" value="visa_debito" onclick="isCheckEnabled();"/>
-                                            </span>
-                                            <span class="imgoption">
-                                                <img src="img/visa.jpg" alt="Visa" />
-                                                Visa (Tarjeta de Crédito)
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="opciones-producto">
+                                <p class="radio-b">
+                                    <label for="mp_visa_debito">
+                                        <input type="radio" name="mp" id="mp_visa_debito" value="visa_debito" onclick="isCheckEnabled();"/>
+                                        <img src="img/visa.jpg">
+                                        <span class="text-option">Visa (Tarjeta de Débito)</span>
+                                    </label>
+                                </p>
                             </div>
                         </div>
                         <div class="clear"></div>
 
                         <div class="seguricash">
-                            <div class="logo-seguricredito">
+                            <div class="logo-producto">
                                 <img src="img/sp_cash.jpg" alt="">
                             </div>
-                            <div class="opciones-seguricredito">
-                               <ul>
-                                    <li>
-                                        <label for="mp_be">
-                                            <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_be" value="bancae" onclick="isCheckEnabled();"/>
-                                            </span>
-                                            <span class="imgoption">
-                                                Banca electrónica
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label for="mp_agente">
-                                            <span class="radiooption">
-                                                <input type="radio" name="mp" id="mp_agente" value="agente" onclick="isCheckEnabled();"/>
-                                                Ventanilla o Agentes
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="logos-bancos">
-                                <img src="img/b.jpg" alt="">
-                                <img src="img/bf.jpg" alt="">
-                                <img src="img/bv.jpg" alt="">
-                                <img src="img/s.jpg" alt="">
-                                <img src="img/int.jpg" alt="">
+                            <div class="opciones-producto">
+                                <p class="radio-b">
+                                    <label for="mp_be">
+                                        <input type="radio" name="mp" id="mp_be" value="bancae" onclick="isCheckEnabled();"/>
+                                        <span class="text-option text-debito">Banca electrónica</span>
+                                    </label>
+                                </p>
+                                <p class="radio-b">
+                                    <label for="mp_agente">
+                                        <input type="radio" name="mp" id="mp_agente" value="agente" onclick="isCheckEnabled();"/>
+                                        <span class="text-option text-debito">Ventanilla o Agentes</span>
+                                    </label>
+                                </p>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -308,7 +276,6 @@ FECHA VENDICMIENTO -->
 
 <script>
     $(document).ready(function(){
-
 
     });
 

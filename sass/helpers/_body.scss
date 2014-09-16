@@ -2,10 +2,6 @@
 
 @media only screen and (max-width: 320px) {
 
-  body{
-      background: red;
-  }
-
   .contenedor{
     width: 98%;
     margin: auto;
@@ -53,16 +49,56 @@
     }
   }
 
+  .form-head {
+    margin: 15px 0px 0px 0px;
+    text-align: center;
+    .monto {
+      float: none;
+    }
+  }
+
+  .form-content {
+    margin: 0px 0px;
+  }
+
+  .form-footer{
+    padding: 15px 0px 0px 0px;
+    .content-pagar{
+      text-align: center;
+    }
+  }
+
+  .modal {
+    margin: auto;
+    padding: 70px 0px 0px 0px;
+    position: absolute;
+    bottom: initial;
+  }
+  .modal-dialog{
+    position: relative;
+    width: 98%;
+    margin: auto;
+  }
+
+  .content-bancos{
+    .logo-sp{
+      width: 100px;
+      img{
+        max-width: 90px;
+      }
+    }
+    .opciones-sp{
+      padding: 0 5px 0px 5px;
+      img{
+        width: 45px;
+      }
+    }
+  }
 
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
 
-  body{
-      background: blue;
-  }
-
-
   .contenedor{
     width: 98%;
     margin: auto;
@@ -109,21 +145,48 @@
       }
     }
   }
+
+  .form-content {
+    .seguricredito {
+      .opciones-producto {
+        .radio-b .text-option {
+          display: inline;
+        }
+      }
+    }
+    .seguridebito {
+      .opciones-producto {
+        .radio-b .text-option {
+          display: inline;
+        }
+      }
+    }
+  }
+
+
+  .modal {
+    margin: auto;
+    padding: 80px 0px 0px 0px;
+    position: absolute;
+    bottom: initial;
+  }
+  .modal-dialog{
+    position: relative;
+    width: 98%;
+    margin: auto;
+  }
+
 
 }
 
 @media only screen and (min-width: 769px) {
-
-  body{
-      background: green;
-  }
 
   .contenedor{
     width: 100%;
     margin: auto;
 
     .content{
-      padding: 10px;
+
     }
   }
 
@@ -145,15 +208,28 @@
         display: none;
       }
     }
-
   }
 
-  .content-form{
+  .form-content {
+    margin: 20px 0px;
+    .seguricredito {
+      .opciones-producto {
 
-    .form-head{
-
+        .radio-b .text-option {
+          display: inline;
+        }
+      }
     }
+    .seguridebito {
+      .opciones-producto {
 
+        .radio-b .text-option {
+          display: inline;
+        }
+      }
+    }
   }
+
+
 
 }
